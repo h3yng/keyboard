@@ -18,7 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 #define DEBUG_MATRIX_SCAN_RATE
-#define TAPPING_TERM 135
+#define TAPPING_TERM 115
 #define PERMISSIVE_HOLD
 #define QUICK_TAP_TERM 0
 

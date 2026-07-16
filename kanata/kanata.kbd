@@ -1,0 +1,31 @@
+;; graphite.kbd
+;; Keep your operating-system keyboard layout set to US QWERTY.
+
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt                spc                 ralt rmet rctl
+)
+
+(defalias
+  ;; Shift remains a normal modifier while also activating the punctuation layer.
+  lsh (multi lsft (layer-while-held shifted))
+  rsh (multi rsft (layer-while-held shifted))
+)
+
+(deflayer graphite
+  grv  1    2    3    4    5    6    7    8    9    0    [    ]    bspc
+  tab  b    l    d    w    z    '    f    o    u    j    ;    =    \
+  caps n    r    t    s    g    y    h    a    e    i    ,    ret
+  @lsh q    x    m    c    v    k    p    ,    -    /    @rsh
+  lctl lmet lalt                spc                 ralt rmet rctl
+)
+
+(deflayermap (shifted)
+  y  -
+  '  /
+  .  '
+  /  ,
+)
